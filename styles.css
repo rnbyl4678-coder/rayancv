@@ -30,7 +30,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
-  /* إضافة Padding للحواف على الجوال */
   padding: 0 15px; 
   box-sizing: border-box;
   transition: background-color 0.5s ease;
@@ -42,7 +41,6 @@ body {
   max-width: 950px;
   margin: auto;
   background-color: var(--light-bg);
-  /* تعديل Padding ليكون أكثر استجابة */
   padding: 40px 30px; 
   border-radius: var(--border-radius-large);
   box-shadow: 0 15px 30px var(--shadow-color);
@@ -239,7 +237,6 @@ header.arabic {
 section {
   margin-bottom: 4rem;
   animation: fadeIn 1.5s ease-in-out;
-  /* استخدام الخصائص المنطقية لـ RTL/LTR */
   border-inline-start: 4px solid var(--bg-color);
   padding-inline-start: 10px;
   transition: border-inline-start-color 0.3s ease;
@@ -627,7 +624,6 @@ body.modal-open .modal-content {
 
 /* Desktop styles */
 @media (min-width: 769px) {
-  /* تعديل Padding في #root ليتناسب مع الشاشات الأكبر */
   #root {
     padding: 40px 50px; 
   }
@@ -644,7 +640,6 @@ body.modal-open .modal-content {
     background-color: transparent;
     transform: translateY(0);
   }
-  /* كسر تنسيق Header على الجوال */
   header {
     flex-direction: row !important;
     align-items: center;
@@ -655,24 +650,27 @@ body.modal-open .modal-content {
 /* تعديل مهم: كسر تنسيق Header على الشاشات الصغيرة (Mobile) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* جعل الصورة والعنوان تحت بعض */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
   }
+  header.arabic, header.english {
+    flex-direction: column; 
+  }
   h1 {
-    font-size: 2.5rem; /* تصغير حجم الخط على الجوال */
+    font-size: 2.5rem; 
   }
   header p {
     font-size: 1.2rem;
   }
   .contact-info {
-    justify-content: center; /* توسيط معلومات الاتصال */
+    justify-content: center; 
   }
   .social-links {
-    justify-content: center; /* توسيط أيقونات التواصل */
+    justify-content: center; 
   }
   #root {
-    padding: 20px 15px; /* تقليل الحشو الداخلي في المربع الرئيسي */
+    padding: 20px 15px; 
   }
 }
 
@@ -684,7 +682,6 @@ body.modal-open .modal-content {
 [dir="rtl"] .navbar-toggle {
   order: 3;
 }
-/* تصحيح الخطأ الإملائي: تم تغيير "1ز" إلى "1" */
 [dir="rtl"] .utility-buttons {
   order: 1; 
 }
